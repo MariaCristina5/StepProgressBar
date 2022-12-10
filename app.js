@@ -26,7 +26,7 @@ function updateStepProgress(){
         if(index< currentChecked){
             stepEl.classList.add("checked");
             stepEl.innerHTML = `<i class="fa-solid fa-check"></i>
-            <small>${index === 0 ? "Start" : index === stepEl.length -1 ? "Final" : "Step " + index}</small>`;
+            <small>${index === 0 ? "Start" : index === stepsEl.length -1 ? "Final" : "Step " + index}</small>`;
         } else {
             stepEl.classList.remove("checked");
             stepEl.innerHTML = `<i class="fa-sharp fa-solid fa-xmark">`;
