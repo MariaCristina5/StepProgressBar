@@ -29,16 +29,16 @@ function updateStepProgress(){
             <small>${index === 0 ? "Start" : index === stepsEl.length -1 ? "Final" : "Step " + index}</small>`;
         } else {
             stepsEl.classList.remove("checked");
-            stepsEl.innerHTML = `<i class="fa-sharp fa-solid fa-xmark">`
+            stepsEl.innerHTML = `<i class="fa-sharp fa-solid fa-xmark">`;
         };
     });
 
     const checkedNumber = document.querySelectorAll(".checked");
-    progressEl.style.width = ((checkedNumber.length) / (stepsEl.length -1)) * 100 + "%"
+    progressEl.style.width = ((checkedNumber.length) / (stepsEl.length -1)) * 100 + "%";
 
     if(currentChecked === 1){
         prevEl.disabled = true;
-    }else if(currentChecked===stepsEl.length){
+    }else if(currentChecked === stepsEl.length){
         nextEl.disabled = true;
     }else{
         prevEl.disabled = false;
