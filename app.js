@@ -22,14 +22,14 @@ prevEl.addEventListener("click", ()=>{
 })
 
 function updateStepProgress(){
-    stepsEl.forEach((stepsEl,index)=>{
+    stepsEl.forEach((stepEl,index)=>{
         if(index< currentChecked){
-            stepsEl.classList.add("checked");
-            stepsEl.innerHTML = `<i class="fa-solid fa-check"></i>
-            <small>${index === 0 ? "Start" : index === stepsEl.length -1 ? "Final" : "Step " + index}</small>`;
+            stepEl.classList.add("checked");
+            stepEl.innerHTML = `<i class="fa-solid fa-check"></i>
+            <small>${index === 0 ? "Start" : index === stepEl.length -1 ? "Final" : "Step " + index}</small>`;
         } else {
-            stepsEl.classList.remove("checked");
-            stepsEl.innerHTML = `<i class="fa-sharp fa-solid fa-xmark">`;
+            stepEl.classList.remove("checked");
+            stepEl.innerHTML = `<i class="fa-sharp fa-solid fa-xmark">`;
         };
     });
 
